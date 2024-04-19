@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "clean": "rimraf public/scripts/dist",
-    "compile": "webpack --config webpack.config.js",
+    "build": "npm run clean && webpack --config webpack.config.js",
     "start": "node server.js",
     "dev": "npm run prestart && nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +14,9 @@
   "author": "BITS - 2022MT13202",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/preset-env": "^7.24.4",
+    "babel-loader": "^9.1.3",
     "nodemon": "^3.1.0"
   },
   "dependencies": {

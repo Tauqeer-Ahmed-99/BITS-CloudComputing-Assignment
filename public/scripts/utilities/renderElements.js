@@ -42,8 +42,11 @@ export const renderAuthErrorMessage = (authError) => {
     case AuthErrorCodes.USER_DELETED:
       errorMessage = "User with this email not found.";
       break;
+    case AuthErrorCodes.INVALID_PASSWORD:
+      errorMessage = "Email or password is wrong.";
+      break;
     default:
-      errorMessage = authError.code + " : " + authError.message;
+      errorMessage = authError.message;
   }
   authErrMsg.innerText = errorMessage;
   authErrMsg.style.display = "block";

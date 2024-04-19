@@ -1,9 +1,13 @@
-import fs from "fs";
-import { fileURLToPath } from "url";
-import path, { dirname } from "path";
+// import fs from "fs";
+// import { fileURLToPath } from "url";
+// import path, { dirname } from "path";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const fs = require("fs");
+// const { fileURLToPath } = require("url");
+const path = require("path");
+
+// const filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 // Function to find all JavaScript files in a directory and its subdirectories
 function findJavaScriptFiles(dir) {
@@ -36,7 +40,7 @@ function generateEntryPoints() {
 // Generate entry points dynamically
 const entryPoints = generateEntryPoints();
 
-const config = {
+module.exports = {
   entry: entryPoints, // Entry point of your application
   output: {
     filename: "[name].js", // Output bundle filename
@@ -47,9 +51,30 @@ const config = {
       {
         test: /\.js$/, // Apply babel-loader for .js files
         exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false,
+        },
+        type: "javascript/auto", // Set the type to 'javascript/auto' to handle ES modules
       },
     ],
   },
+  resolve: {
+    fullySpecified: false,
+  },
+  experiments: {
+    topLevelAwait: true,
+    outputModule: true,
+  },
+  resolve: {
+    extensions: [".js", ".mjs"],
+  },
 };
-
-export default config;
