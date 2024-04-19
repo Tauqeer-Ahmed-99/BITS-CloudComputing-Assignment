@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script type="text/javascript" src="./scripts/dist/login.js" defer></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form class="form">
+      <h3>Login</h3>
+
+      <label for="email">Email</label>
+      <input type="text" placeholder="Email" id="email" />
+      <p id="email-err-msg">Please enter a valid email.</p>
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" />
+      <p id="password-err-msg">Please enter a password.</p>
+
+      <p id="err-msg"></p>
+
+      <button type="button" id="login-btn">Log In</button>
+
+      <div id="loader" class="loader-container">
+        <div class="loader"></div>
+      </div>
+
+      <a href="/signup">
+        <button
+          class="secondary-button"
+          type="button"
+          id="signup-secondary-btn"
+        >
+          Signup
+        </button></a
+      >
+    </form>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script
+      type="text/javascript"
+      src="./scripts/dist/signup.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form class="form signup-form">
+      <h3>Create an Account</h3>
+
+      <label for="email">Email</label>
+      <input type="text" placeholder="Email" id="email" />
+      <p id="email-err-msg">Please enter a valid email.</p>
+
+      <label for="password">Password</label>
+      <input type="password" placeholder="Password" id="password" />
+      <p id="password-err-msg">Please enter a valid password. (8 chars long)</p>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        id="confirm-password"
+      />
+      <p id="confirm-password-err-msg">Passwords donot match.</p>
+      <p id="err-msg"></p>
+
+      <button type="button" id="signup-btn">Signup</button>
+
+      <div id="loader" class="loader-container">
+        <div class="loader"></div>
+      </div>
+
+      <a href="/login">
+        <button class="secondary-button" type="button">Log In</button></a
+      >
+    </form>
+  </body>
+</html>

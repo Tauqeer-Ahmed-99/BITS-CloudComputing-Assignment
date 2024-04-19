@@ -1,0 +1,29 @@
+{
+  "name": "bits-cloud-computing-assignment-1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Bits WILP Cloud Coumputing Assignment 1 : Deploy a Basic Login/Logout Web Application using Google App Engine and Node JS",
+  "main": "server.js",
+  "scripts": {
+    "clean": "rimraf public/scripts/dist",
+    "compile": "webpack --config webpack.config.js",
+    "prestart": "npm run clean && npm run compile",
+    "start": "npm run prestart && node server.js",
+    "dev": "npm run prestart && nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BITS - 2022MT13202",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.11.0",
+    "rimraf": "^5.0.5",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
