@@ -1,5 +1,8 @@
-import express from "express";
-import { resolve } from "path";
+// import express from "express";
+// import { resolve } from "path";
+
+const express = require("express");
+const { resolve } = require("path");
 
 const pageResolverRouter = express.Router();
 
@@ -19,4 +22,6 @@ pageResolverRouter.get("/home", (req, res) => {
   res.sendFile(resolve("public/home.html"));
 });
 
-export default pageResolverRouter;
+// export default pageResolverRouter;
+
+module.exports = pageResolverRouter;

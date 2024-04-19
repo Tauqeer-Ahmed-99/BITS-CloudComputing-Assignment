@@ -1,4 +1,6 @@
-import express from "express";
+// import express from "express";
+
+const express = require("express");
 
 const availbleRoutes = ["/", "/login", "/signup", "/home"];
 
@@ -12,4 +14,6 @@ routeProtector.use((req, res, next) => {
   }
 });
 
-export default routeProtector;
+// export default routeProtector;
+
+module.exports = routeProtector;
