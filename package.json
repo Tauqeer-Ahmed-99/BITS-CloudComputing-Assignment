@@ -7,7 +7,6 @@
   "scripts": {
     "clean": "rimraf public/scripts/dist",
     "compile": "webpack --config webpack.config.js",
-    "prestart": "npm run clean && npm run compile",
     "start": "node server.js",
     "dev": "npm run prestart && nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
