@@ -1,7 +1,7 @@
 {
   "name": "bits-cloud-computing-assignment-1",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "Bits WILP Cloud Coumputing Assignment 1 : Deploy a Basic Login/Logout Web Application using Google App Engine and Node JS",
   "main": "server.js",
   "scripts": {
