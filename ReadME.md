@@ -1,0 +1,5 @@
+1. Setting up NodeJS Environment (Tauqeer)
+2. Building Signup/Login Web Application (Tanvir)
+3. Implementing Firebase Authentication (Latha)
+4. Setting up Google Cloud Environment. (Kiran)
+5. Deploying Application to the Cloud. (Abishai)
